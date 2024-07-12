@@ -1,7 +1,7 @@
 import React from 'react'
 import './singlePage.scss'
 import Slider from '../../src/components/slider/Slider'
-import { singlePostData } from '../../src/lib/dummydata'
+import { singlePostData, userData } from '../../src/lib/dummydata'
 
 const SinglePage = () => {
   return (
@@ -17,10 +17,16 @@ const SinglePage = () => {
                   <img src="/pin.png" alt="" />
                   <span>{singlePostData.address}</span>
                 </div>
+                <div className="price">$ {singlePostData.price}</div>
               </div>
-              <div className="user"></div>
+              <div className="user">
+                <img src={userData.img} alt="" />
+                <span>{userData.name}</span>
+              </div>
             </div>
-            <div className="bottom"></div>
+            <div className="bottom">
+              {singlePostData.description}
+            </div>
           </div>
         </div>
       </div>
